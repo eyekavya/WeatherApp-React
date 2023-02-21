@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+
 import background from "./background.jpg";
+import Navbar from "./components/Navbar/Navbar";
 import SearchInput from "./components/SearchInput/SearchInput";
 
 function App() {

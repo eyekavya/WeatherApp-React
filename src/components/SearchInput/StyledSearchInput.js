@@ -9,7 +9,6 @@ export const StyledSearchInput = styled.section`
 
   body,
   html {
-    background: #e2e9f4;
     display: grid;
     height: 100%;
     grid-template: 1fr/100%;
@@ -19,19 +18,15 @@ export const StyledSearchInput = styled.section`
   .Card {
     padding: 1px;
     border-radius: 10px;
-    background: linear-gradient(
-      -67deg,
-      rgba(#c8d8e7, 0.7),
-      rgba(255, 255, 255, 0.8)
-    );
+
     overflow: hidden;
-    box-shadow: -2px -2px 6px rgba(#fff, 0.6), 2px 2px 12px #c8d8e7;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), 2px 2px 12px #c8d8e7;
     width: 380px;
   }
 
   .CardInner {
     padding: 16px 16px;
-    background-color: #e2e9f4;
+    background-color: #e2e9f46e;
     border-radius: 10px;
   }
 
@@ -47,7 +42,7 @@ export const StyledSearchInput = styled.section`
     justify-content: center;
     border-radius: 10px;
     margin-right: 12px;
-    box-shadow: -2px -2px 6px rgba(#fff, 0.6), 2px 2px 12px #c8d8e7;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), 2px 2px 12px #c8d8e7;
 
     svg {
       transform: translate(-1px, -1px);
@@ -69,7 +64,7 @@ export const StyledSearchInput = styled.section`
   }
 
   input {
-    background-color: #e3edf7;
+    background-color: #e3edf73d;
     padding: 16px 32px;
     border: none;
     display: block;
