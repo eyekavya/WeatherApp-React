@@ -1,6 +1,9 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+
 import background from "./background.jpg";
+import Card from "./components/Card/Card";
+import Navbar from "./components/Navbar/Navbar";
+import SearchInput from "./components/SearchInput/SearchInput";
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
         }}
       >
         <Navbar />
+        <SearchInput />
+        <Card />
       </div>
     </>
   );
