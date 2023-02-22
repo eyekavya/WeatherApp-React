@@ -1,6 +1,7 @@
 import React from "react";
 
 import background from "./background.jpg";
+import Card from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
 import SearchInput from "./components/SearchInput/SearchInput";
 
@@ -19,6 +20,7 @@ function App() {
       >
         <Navbar />
         <SearchInput />
+        <Card />
       </div>
     </>
   );

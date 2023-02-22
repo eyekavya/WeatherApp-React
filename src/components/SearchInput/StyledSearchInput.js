@@ -5,7 +5,7 @@ export const StyledSearchInput = styled.section`
   color: #acbdce;
   display: flex;
   justify-content: center;
-  margin: 6rem;
+  margin: 3.5rem;
 
   body,
   html {
