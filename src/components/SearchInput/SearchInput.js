@@ -7,7 +7,7 @@ function SearchInput() {
 
   const handleClick = (event) => {
     event.preventDefault();
-    fetchWeather();
+    fetchWeather(city);
     console.log(city);
   };
 
