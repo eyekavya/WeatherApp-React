@@ -3,13 +3,24 @@ import { fetchWeather } from "../../weather-data/fetchWeather";
 import { StyledSearchInput } from "./StyledSearchInput";
 
 function SearchInput() {
+  const [city, setCity] = useState("");
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    fetchWeather();
+    console.log(city);
+  };
+
+  const handleChange = (event) => {
+    setCity(event.target.value);
+  };
   return (
     <StyledSearchInput>
       <div className="Card">
         <div className="CardInner">
           {/* <label>Search for a city</label> */}
           <div className="container">
-            <div className="Icon">
+            <div className="Icon" onClick={handleClick}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -27,7 +38,11 @@ function SearchInput() {
               </svg>
             </div>
             <div className="InputContainer">
-              <input placeholder="Search for a city..." />
+              <input
+                placeholder="Search for a city..."
+                onChange={handleChange}
+                value={city}
+              />
             </div>
           </div>
         </div>
