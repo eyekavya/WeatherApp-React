@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { fetchWeather } from "../../weather-data/fetchWeather";
 import { StyledSearchInput } from "./StyledSearchInput";
 
 function SearchInput() {
@@ -16,9 +17,9 @@ function SearchInput() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="#657789"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="feather feather-search"
               >
                 <circle cx="11" cy="11" r="8" />
