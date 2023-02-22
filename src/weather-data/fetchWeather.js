@@ -11,9 +11,11 @@
 
 import { weather_api_key } from "../constants/appConfig";
 
-export const fetchWeather = async () => {
+export const fetchWeather = async (city) => {
   await fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/New%20York%20City%2CNY?unitGroup=us&key=${weather_api_key}&contentType=json`,
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city
+      .split(" ")
+      .join("%20")}?key=${weather_api_key}`,
     {
       method: "GET",
     }
