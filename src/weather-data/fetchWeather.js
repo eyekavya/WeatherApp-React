@@ -12,17 +12,18 @@
 import { weather_api_key } from "../constants/appConfig";
 
 export const fetchWeather = async (city) => {
-  await fetch(
+  return await fetch(
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city
       .split(" ")
-      .join("%20")}?key=${weather_api_key}`,
+      .join("%20")}/${new Date().toJSON().slice(0, 10)}?key=${weather_api_key}`,
     {
       method: "GET",
     }
-  ).then((res) => {
-    res.text().then((txt) => {
-      console.log(JSON.parse(txt));
+  )
+    .then((res) => {
+      return res.text();
+    })
+    .then((txt) => {
       return JSON.parse(txt);
     });
-  });
 };
