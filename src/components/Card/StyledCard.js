@@ -12,14 +12,14 @@ export const StyledCard = styled.section`
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    margin-top: 6.5rem;
-    width: 1250px;
+    margin-top: 5.5rem;
+    width: 1275px;
   }
 
   .card {
     background: rgba(255, 255, 255, 0.3);
     padding: 3em;
-    height: 500px;
+    height: 530px;
     border-radius: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -87,5 +87,12 @@ export const StyledCard = styled.section`
     bottom: 170px;
     left: 90px;
     z-index: -1;
+  }
+  .parent {
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 `;

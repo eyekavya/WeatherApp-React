@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import SearchInput from "./components/SearchInput/SearchInput";
 
 function App() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState();
 
   const updateData = (data) => {
     setData(data);
