@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { fetchWeather } from "../../weather-data/fetchWeather";
 import { StyledSearchInput } from "./StyledSearchInput";
 
-function SearchInput() {
+function SearchInput({ updateData }) {
   const [city, setCity] = useState("");
 
-  const handleClick = (event) => {
+  const handleClick = async (event) => {
     event.preventDefault();
-    fetchWeather(city);
-    console.log(city);
+    const data = await fetchWeather(city);
+    updateData(data);
+    return;
   };
 
   const handleChange = (event) => {

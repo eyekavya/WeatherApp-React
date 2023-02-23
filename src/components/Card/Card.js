@@ -1,8 +1,7 @@
 import React from "react";
-import { fetchWeather } from "../../weather-data/fetchWeather";
 import { StyledCard } from "./StyledCard";
 
-function Card() {
+function Card({ data }) {
   return (
     <StyledCard>
       <div className="container">
