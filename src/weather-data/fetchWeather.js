@@ -1,21 +1,10 @@
-// "resolvedAddress": "Noida, UP, India",
-// "address": "noida",
-// "datetime": "2023-02-20",
-// "tempmax": 89.5,
-// "tempmin": 62.5,
-// "temp": 74.4,
-// "feelslike": 73.6,
-// "humidity": 60.8,
-// "conditions": "Partially cloudy",
-// "icon": "partly-cloudy-day",
-
 import { weather_api_key } from "../constants/appConfig";
 
 export const fetchWeather = async (city) => {
   return await fetch(
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city
       .split(" ")
-      .join("%20")}/${new Date().toJSON().slice(0, 10)}?key=${weather_api_key}`,
+      .join("%20")}?key=${weather_api_key}`,
     {
       method: "GET",
     }
