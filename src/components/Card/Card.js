@@ -24,7 +24,7 @@ function Card({ data, imageUrl }) {
               >
                 {/* Icon */}
                 <div>
-                  <img src={imageUrl} alt="weather condition icon" />
+                  <img src={imageUrl} alt="" />
                 </div>
                 <div>
                   {/* Temp  */}

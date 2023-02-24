@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { ipData_api_key } from "../../constants/appConfig";
 import { fetchWeather } from "../../weather-data/fetchWeather";
 import { StyledSearchInput } from "./StyledSearchInput";
 
 function SearchInput({ updateData }) {
   const [city, setCity] = useState("");
 
-  const handleClick = async (event) => {
-    event.preventDefault();
-    const data = await fetchWeather(city);
+  const handleClick = async (fetchCity) => {
+    const data = await fetchWeather(fetchCity);
     updateData(data);
     return;
   };
@@ -15,13 +15,40 @@ function SearchInput({ updateData }) {
   const handleChange = (event) => {
     setCity(event.target.value);
   };
+
+  const fetchIpData = async () => {
+    const ipData = await fetch(
+      `https://api.ipdata.co/?api-key=${ipData_api_key}`,
+      {
+        method: "GET",
+      }
+    )
+      .then((res) => {
+        return res.text();
+      })
+      .then((txt) => {
+        return JSON.parse(txt);
+      });
+
+    handleClick(ipData.city);
+  };
+
+  useEffect(() => {
+    fetchIpData();
+  }, []);
+
   return (
     <StyledSearchInput>
       <div className="Card">
         <div className="CardInner">
           {/* <label>Search for a city</label> */}
           <div className="container">
-            <div className="Icon" onClick={handleClick}>
+            <div
+              className="Icon"
+              onClick={() => {
+                handleClick(city);
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
