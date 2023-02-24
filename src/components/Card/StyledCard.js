@@ -102,17 +102,17 @@ export const StyledCard = styled.section`
   }
 
   .flex-details {
-    padding: 2rem;
+    padding: 1.5rem 3rem;
     color: #fff;
   }
 
   .flex-key {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .flex-value {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
   }
 `;

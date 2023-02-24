@@ -13,6 +13,7 @@
 
 import React from "react";
 import { StyledCard } from "./StyledCard";
+import sun from "./partly-cloudy-day.png";
 
 function Card({ data }) {
   console.log(data);
@@ -21,8 +22,8 @@ function Card({ data }) {
     <StyledCard>
       <div className="container">
         <div className="card">
-          <div className="d-flex flex-row justify-content-around">
-            <div className="d-flex flex-column">
+          <div className="d-flex flex-row justify-content-evenly">
+            <div className="d-flex flex-column" style={{ gap: "1.5rem" }}>
               {/* PLACE AND DATE */}
               <div className="p-2">
                 {/* Address */}
@@ -33,9 +34,14 @@ function Card({ data }) {
                 <div className="flex-summary"> {data?.days[0]?.datetime}</div>
               </div>
               {/* TEMP SUMMARY */}
-              <div className="p-2 d-flex flex-row justify-content-around">
+              <div
+                className="p-2 d-flex flex-row justify-content-between"
+                style={{ gap: "50px" }}
+              >
                 {/* Icon */}
-                <div>img</div>
+                <div>
+                  <img src={sun} alt="" />
+                </div>
                 <div>
                   {/* Temp  */}
                   <div
