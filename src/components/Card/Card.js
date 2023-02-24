@@ -13,11 +13,8 @@
 
 import React from "react";
 import { StyledCard } from "./StyledCard";
-import sun from "./partly-cloudy-day.png";
 
-function Card({ data }) {
-  console.log(data);
-
+function Card({ data, imageUrl }) {
   return (
     <StyledCard>
       <div className="container">
@@ -40,7 +37,7 @@ function Card({ data }) {
               >
                 {/* Icon */}
                 <div>
-                  <img src={sun} alt="" />
+                  <img src={imageUrl} alt="weather condition icon" />
                 </div>
                 <div>
                   {/* Temp  */}
