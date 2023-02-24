@@ -23,16 +23,88 @@ function Card({ data }) {
         <div className="card">
           <div className="d-flex flex-row justify-content-around">
             <div className="d-flex flex-column">
+              {/* PLACE AND DATE */}
               <div className="p-2">
-                <div>{data?.resolvedAddress}</div>
-                <div> {data?.days[0]?.datetime}</div>
+                {/* Address */}
+                <div className="flex-summary" style={{ fontSize: "28px" }}>
+                  {data?.resolvedAddress}
+                </div>
+                {/* Date */}
+                <div className="flex-summary"> {data?.days[0]?.datetime}</div>
               </div>
-              <div className="p-2">
-                <div></div>
+              {/* TEMP SUMMARY */}
+              <div className="p-2 d-flex flex-row justify-content-around">
+                {/* Icon */}
+                <div>img</div>
+                <div>
+                  {/* Temp  */}
+                  <div
+                    style={{
+                      fontSize: "62px",
+                      fontWeight: "600",
+                      color: "#fff",
+                    }}
+                  >
+                    {(((data?.days[0]?.temp - 32) * 5) / 9).toFixed(2)}&deg;
+                  </div>
+                  {/* Weather Condition  */}
+                  <div
+                    style={{
+                      color: "#fff",
+                      fontWeight: "500",
+                      fontSize: "22px",
+                    }}
+                  >
+                    {data?.days[0]?.conditions}
+                  </div>
+                </div>
               </div>
             </div>
+            {/* WEATHER DETAILS  */}
             <div className="d-flex flex-column justify-content-center">
-              <div className="p-2">Flex item 1</div>
+              <div className="d-flex flex-row justify-content-center">
+                {/*  MAX TEMP  */}
+                <div className="flex-details">
+                  <div className="flex-value">
+                    {(((data?.days[0]?.tempmax - 32) * 5) / 9).toFixed(2)}
+                    &#8451;
+                  </div>
+                  <div className="flex-key">Max</div>
+                </div>
+                {/* FEELS LIKE  */}
+                <div className="flex-details">
+                  <div className="flex-value">
+                    {(((data?.days[0]?.feelslike - 32) * 5) / 9).toFixed(2)}
+                    &#8451;
+                  </div>
+                  <div className="flex-key">Feels Like</div>
+                </div>
+                {/* SUNRISE  */}
+                <div className="flex-details">
+                  <div className="flex-value">{data?.days[0]?.sunrise}</div>
+                  <div className="flex-key">Sunrise</div>
+                </div>
+              </div>
+              <div className="d-flex flex-row justify-content-center">
+                {/* MIN TEMP  */}
+                <div className="flex-details">
+                  <div className="flex-value">
+                    {(((data?.days[0]?.tempmin - 32) * 5) / 9).toFixed(2)}
+                    &#8451;
+                  </div>
+                  <div className="flex-key">Min</div>
+                </div>
+                {/* HUMIDITY  */}
+                <div className="flex-details">
+                  <div className="flex-value">{data?.days[0]?.humidity}</div>
+                  <div className="flex-key">Humidity</div>
+                </div>
+                {/* SUNSET  */}
+                <div className="flex-details">
+                  <div className="flex-value">{data?.days[0]?.sunset}</div>
+                  <div className="flex-key">Sunset</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

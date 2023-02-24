@@ -95,4 +95,24 @@ export const StyledCard = styled.section`
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
+
+  .flex-summary {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .flex-details {
+    padding: 2rem;
+    color: #fff;
+  }
+
+  .flex-key {
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .flex-value {
+    font-weight: 700;
+    font-size: 24px;
+  }
 `;
