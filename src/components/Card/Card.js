@@ -1,16 +1,3 @@
-// "resolvedAddress": "Noida, UP, India",
-// "address": "noida",
-// "datetime": "2023-02-20",
-// "tempmax": 89.5,
-// "tempmin": 62.5,
-// "temp": 74.4,
-// "feelslike": 73.6,
-// "humidity": 60.8,
-// "conditions": "Partially cloudy",
-// "icon": "partly-cloudy-day",
-// new Date().toDateString();
-// new Date().toDateString()
-
 import React from "react";
 import { StyledCard } from "./StyledCard";
 

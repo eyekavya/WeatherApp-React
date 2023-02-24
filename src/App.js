@@ -9,6 +9,7 @@ import partlyCloudy from "./images/partly-cloudy-day.png";
 import rain from "./images/rain.png";
 import fog from "./images/fog.png";
 import snow from "./images/snow.png";
+import wind from "./images/wind.png";
 
 function App() {
   const [data, setData] = useState();
@@ -26,6 +27,8 @@ function App() {
       setImageUrl(rain);
     } else if (data?.days[0]?.icon === "fog") {
       setImageUrl(fog);
+    } else if (data?.days[0]?.icon === "wind") {
+      setImageUrl(wind);
     } else {
       setImageUrl(snow);
     }
