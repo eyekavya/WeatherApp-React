@@ -3,6 +3,7 @@ import background from "./background.jpg";
 import Card from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
 import SearchInput from "./components/SearchInput/SearchInput";
+
 import clear from "./images/weather-icons/clear-day.png";
 import cloudy from "./images/weather-icons/cloudy.png";
 import partlyCloudy from "./images/weather-icons/partly-cloudy-day.png";
