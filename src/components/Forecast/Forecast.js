@@ -30,15 +30,9 @@ function Forecast({ data }) {
         className="container d-flex flex-row justify-content-center align-items-center"
         style={{ margin: "8rem 0 0 0rem" }}
       >
-        {/* <p
-          className="lead"
-          style={{ textAlign: "left", margin: "3rem 2rem 0 2rem" }}
-        >
-          Forecast
-        </p> */}
         {data?.days.map((e, i) => {
           return (
-            i != 0 && (
+            i !== 0 && (
               <div
                 style={{
                   fontSize: "18px",
