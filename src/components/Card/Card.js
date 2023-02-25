@@ -98,7 +98,7 @@ function Card({ data, imageUrl }) {
               </div>
             </div>
           </div>
-          <Forecast />
+          <Forecast data={data} />
         </div>
 
         <div className="drops">
