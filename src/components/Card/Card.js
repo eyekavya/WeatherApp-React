@@ -1,4 +1,5 @@
 import React from "react";
+import Forecast from "../Forecast/Forecast";
 import { StyledCard } from "./StyledCard";
 
 function Card({ data, imageUrl }) {
@@ -7,7 +8,7 @@ function Card({ data, imageUrl }) {
       <div className="container">
         <div className="card">
           <div className="d-flex flex-row justify-content-evenly">
-            <div className="d-flex flex-column" style={{ gap: "1.5rem" }}>
+            <div className="d-flex flex-column">
               {/* PLACE AND DATE */}
               <div className="p-2">
                 {/* Address */}
@@ -97,6 +98,7 @@ function Card({ data, imageUrl }) {
               </div>
             </div>
           </div>
+          <Forecast />
         </div>
 
         <div className="drops">

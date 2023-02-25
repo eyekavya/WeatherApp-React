@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import background from "./background.jpg";
 import Card from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
 import SearchInput from "./components/SearchInput/SearchInput";
-import clear from "./images/clear-day.png";
-import cloudy from "./images/cloudy.png";
-import partlyCloudy from "./images/partly-cloudy-day.png";
-import rain from "./images/rain.png";
-import fog from "./images/fog.png";
-import snow from "./images/snow.png";
-import wind from "./images/wind.png";
+import clear from "./images/weather-icons/clear-day.png";
+import cloudy from "./images/weather-icons/cloudy.png";
+import partlyCloudy from "./images/weather-icons/partly-cloudy-day.png";
+import rain from "./images/weather-icons/rain.png";
+import fog from "./images/weather-icons/fog.png";
+import snow from "./images/weather-icons/snow.png";
+import wind from "./images/weather-icons/wind.png";
 
 function App() {
   const [data, setData] = useState();
