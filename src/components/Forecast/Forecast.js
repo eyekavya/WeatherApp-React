@@ -28,9 +28,26 @@ function Forecast({ data }) {
     <>
       <div
         className="container d-flex flex-row justify-content-center align-items-center"
-        style={{ margin: "8rem 0 0 0rem" }}
+        style={{ marginTop: "8rem" }}
       >
         {data?.days.map((e, i) => {
+          let date = new Date(e?.datetime);
+          const months = [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ];
+          let formatedDate =
+            date.getDate().toString() + " " + months[date.getMonth()];
           return (
             i !== 0 && (
               <div
@@ -42,7 +59,7 @@ function Forecast({ data }) {
                   width: "max-content",
                 }}
               >
-                <div style={{ fontSize: "15px" }}>{e?.datetime}</div>
+                <div style={{ fontSize: "15px" }}>{formatedDate}</div>
                 <img
                   src={clearDay}
                   alt=""
