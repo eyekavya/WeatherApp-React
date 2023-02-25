@@ -36,27 +36,29 @@ function Forecast({ data }) {
         >
           Forecast
         </p> */}
-        {data?.days.map((e) => {
+        {data?.days.map((e, i) => {
           return (
-            <div
-              style={{
-                fontSize: "18px",
-                color: "#fff",
-                borderRight: "0.1px solid rgb(255 255 255 / 56%)",
-                padding: "1rem",
-                width: "max-content",
-              }}
-            >
-              <div style={{ fontSize: "15px" }}>{e?.datetime}</div>
-              <img
-                src={clearDay}
-                alt=""
-                style={{ width: "36px", padding: "5px 0" }}
-              />
-              <div style={{ fontSize: "15px" }}>
-                {(((e?.temp - 32) * 5) / 9).toFixed(2)}&deg;
+            i != 0 && (
+              <div
+                style={{
+                  fontSize: "18px",
+                  color: "#fff",
+                  borderRight: "0.1px solid rgb(255 255 255 / 56%)",
+                  padding: "1rem",
+                  width: "max-content",
+                }}
+              >
+                <div style={{ fontSize: "15px" }}>{e?.datetime}</div>
+                <img
+                  src={clearDay}
+                  alt=""
+                  style={{ width: "36px", padding: "5px 0" }}
+                />
+                <div style={{ fontSize: "15px" }}>
+                  {(((e?.temp - 32) * 5) / 9).toFixed(2)}&deg;
+                </div>
               </div>
-            </div>
+            )
           );
         })}
       </div>
