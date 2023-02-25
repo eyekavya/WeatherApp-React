@@ -52,11 +52,12 @@ function Forecast({ data }) {
             i !== 0 && (
               <div
                 style={{
+                  padding: "0 1.2rem",
                   fontSize: "18px",
                   color: "#fff",
-                  borderRight: "0.1px solid rgb(255 255 255 / 56%)",
-                  padding: "1rem",
                   width: "max-content",
+                  borderRight:
+                    i !== 14 ? "0.1px solid rgb(255 255 255 / 56%)" : "none",
                 }}
               >
                 <div style={{ fontSize: "15px" }}>{formatedDate}</div>
@@ -66,7 +67,7 @@ function Forecast({ data }) {
                   style={{ width: "36px", padding: "5px 0" }}
                 />
                 <div style={{ fontSize: "15px" }}>
-                  {(((e?.temp - 32) * 5) / 9).toFixed(2)}&deg;
+                  {(((e?.temp - 32) * 5) / 9).toFixed(0)}&deg;
                 </div>
               </div>
             )
