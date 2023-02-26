@@ -9,6 +9,7 @@ function SearchInput({ updateData }) {
   const handleClick = async (fetchCity) => {
     const data = await fetchWeather(fetchCity);
     updateData(data);
+    setCity("");
     return;
   };
 
