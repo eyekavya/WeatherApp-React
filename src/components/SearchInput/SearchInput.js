@@ -70,6 +70,11 @@ function SearchInput({ updateData }) {
               <input
                 placeholder="Search for a city..."
                 onChange={handleChange}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleClick(city);
+                  }
+                }}
                 value={city}
               />
             </div>
