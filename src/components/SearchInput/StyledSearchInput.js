@@ -49,16 +49,6 @@ export const StyledSearchInput = styled.section`
     }
   }
 
-  label {
-    font-family: "Hind", sans-serif;
-    display: block;
-    color: #3c4b66;
-    margin-bottom: 12px;
-    background: linear-gradient(45deg, rgba(#6b7b8f, 1), #3c4b66);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   .InputContainer {
     width: 100%;
   }
