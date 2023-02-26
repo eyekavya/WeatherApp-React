@@ -3,6 +3,28 @@ import Forecast from "../Forecast/Forecast";
 import { StyledCard } from "./StyledCard";
 
 function Card({ data, imageUrl }) {
+  let date = new Date(data?.days[0]?.datetime);
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let formatedDate =
+    days[date.getDay()] +
+    ", " +
+    date.getDate().toString() +
+    " " +
+    months[date.getMonth()];
   return (
     <StyledCard>
       <div className="container">
@@ -16,7 +38,7 @@ function Card({ data, imageUrl }) {
                   {data?.resolvedAddress}
                 </div>
                 {/* Date */}
-                <div className="flex-summary"> {data?.days[0]?.datetime}</div>
+                <div className="flex-summary"> {formatedDate}</div>
               </div>
               {/* TEMP SUMMARY */}
               <div
