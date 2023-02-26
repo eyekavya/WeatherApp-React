@@ -81,6 +81,7 @@ function Forecast({ data }) {
           return (
             i !== 0 && (
               <div
+                key={i}
                 style={{
                   padding: "0 1.2rem",
                   fontSize: "18px",
