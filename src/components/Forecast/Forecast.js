@@ -2,6 +2,21 @@ import React from "react";
 import { iconUrl } from "../../constants/imgImports";
 
 function Forecast({ data }) {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
   function getIconUrl(e) {
     if (e.icon === "clear-day") {
       return iconUrl.clearDay;
@@ -60,20 +75,7 @@ function Forecast({ data }) {
       >
         {data?.days.map((e, i) => {
           let date = new Date(e?.datetime);
-          const months = [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-          ];
+
           let formatedDate =
             date.getDate().toString() + " " + months[date.getMonth()];
 

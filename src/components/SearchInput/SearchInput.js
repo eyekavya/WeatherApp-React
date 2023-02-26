@@ -42,7 +42,6 @@ function SearchInput({ updateData }) {
     <StyledSearchInput>
       <div className="Card">
         <div className="CardInner">
-          {/* <label>Search for a city</label> */}
           <div className="container">
             <div
               className="Icon"
