@@ -1,3 +1,11 @@
+import clear from "../images/weather-icons/clear-day.png";
+import cloudy from "../images/weather-icons/cloudy.png";
+import partlyCloudy from "../images/weather-icons/partly-cloudy-day.png";
+import rain from "../images/weather-icons/rain.png";
+import fog from "../images/weather-icons/fog.png";
+import snow from "../images/weather-icons/snow.png";
+import wind from "../images/weather-icons/wind.png";
+
 import clearDay from "../images/forecast-icons/clear-day.png";
 import clearNight from "../images/forecast-icons/clear-night.png";
 import cloud from "../images/forecast-icons/cloudy.png";
@@ -22,6 +30,13 @@ import thunder from "../images/forecast-icons/thunder.png";
 import windy from "../images/forecast-icons/wind.png";
 
 export const iconUrl = {
+  clear,
+  cloudy,
+  partlyCloudy,
+  rain,
+  fog,
+  snow,
+  wind,
   clearDay,
   sleet,
   thunder,

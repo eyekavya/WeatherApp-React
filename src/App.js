@@ -3,14 +3,7 @@ import background from "./background.jpg";
 import Card from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
 import SearchInput from "./components/SearchInput/SearchInput";
-
-import clear from "./images/weather-icons/clear-day.png";
-import cloudy from "./images/weather-icons/cloudy.png";
-import partlyCloudy from "./images/weather-icons/partly-cloudy-day.png";
-import rain from "./images/weather-icons/rain.png";
-import fog from "./images/weather-icons/fog.png";
-import snow from "./images/weather-icons/snow.png";
-import wind from "./images/weather-icons/wind.png";
+import { iconUrl } from "./constants/imgImports";
 
 function App() {
   const [data, setData] = useState();
@@ -18,20 +11,21 @@ function App() {
 
   const updateData = (data) => {
     setData(data);
+
     if (data?.days[0]?.icon === "clear-day") {
-      setImageUrl(clear);
+      setImageUrl(iconUrl.clear);
     } else if (data?.days[0]?.icon === "cloudy") {
-      setImageUrl(cloudy);
+      setImageUrl(iconUrl.cloudy);
     } else if (data?.days[0]?.icon === "partly-cloudy-day") {
-      setImageUrl(partlyCloudy);
+      setImageUrl(iconUrl.partlyCloudy);
     } else if (data?.days[0]?.icon === "rain") {
-      setImageUrl(rain);
+      setImageUrl(iconUrl.rain);
     } else if (data?.days[0]?.icon === "fog") {
-      setImageUrl(fog);
+      setImageUrl(iconUrl.fog);
     } else if (data?.days[0]?.icon === "wind") {
-      setImageUrl(wind);
+      setImageUrl(iconUrl.wind);
     } else {
-      setImageUrl(snow);
+      setImageUrl(iconUrl.snow);
     }
   };
 
