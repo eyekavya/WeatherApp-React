@@ -13,7 +13,7 @@ export const StyledCard = styled.section`
     top: 50%;
     left: 50%;
     margin-top: 5.5rem;
-    width: max-content;
+    width: 1278px;
     min-width: 500px;
   }
 
@@ -42,7 +42,7 @@ export const StyledCard = styled.section`
   }
 
   .glassCard:hover {
-    margin: 4px;
+    margin: 4px !important;
   }
 
   .drop {

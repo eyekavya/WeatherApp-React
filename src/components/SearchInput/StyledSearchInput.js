@@ -8,7 +8,7 @@ export const StyledSearchInput = styled.section`
   margin: 2rem;
 
   position: relative;
-  z-index: 99999999999;
+  z-index: 9999;
 
   body,
   html {
