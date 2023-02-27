@@ -4,8 +4,6 @@ import Spinner from "../Spinner/Spinner";
 import { StyledCard } from "./StyledCard";
 
 function Card({ data, imageUrl }) {
-  const [loading, setLoading] = useState(true);
-
   let date = new Date(data?.days[0]?.datetime);
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const months = [
@@ -29,14 +27,11 @@ function Card({ data, imageUrl }) {
     " " +
     months[date.getMonth()];
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1500);
-  }, []);
   return (
     <StyledCard>
       <div className="cardContainer">
         <div className="glassCard">
-          {loading === false ? (
+          {data ? (
             <div>
               <div className="d-flex flex-column flex-lg-row justify-content-evenly">
                 <div className="d-flex flex-column">
