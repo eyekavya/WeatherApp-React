@@ -7,6 +7,9 @@ export const StyledSearchInput = styled.section`
   justify-content: center;
   margin: 2rem;
 
+  position: relative;
+  z-index: 99999999999;
+
   body,
   html {
     display: grid;

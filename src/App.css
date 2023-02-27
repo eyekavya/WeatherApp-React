@@ -1,2 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+
+.img-fluid {
+  background-image: url("./background.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.forecast-container {
+  margin-top: 8rem;
+}
+
+.forecast {
+  padding: 0 1.2rem;
+  font-size: 18px;
+  color: #fff;
+  width: max-content;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .img-fluid {
+    background-position: revert;
+  }
+
+  .glassCard {
+    margin-top: 37rem;
+  }
+
+  .forecast-container {
+    margin-top: 3rem;
+  }
+
+  .forecast {
+    border-right: none !important;
+    margin-top: 2rem;
+  }
+}
