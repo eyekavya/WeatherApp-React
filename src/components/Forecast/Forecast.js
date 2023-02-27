@@ -69,10 +69,7 @@ function Forecast({ data }) {
 
   return (
     <>
-      <div
-        className="container d-flex flex-row justify-content-center align-items-center"
-        style={{ marginTop: "8rem" }}
-      >
+      <div className="forecast-container container flex-wrap d-flex flex-row justify-content-center align-items-center">
         {data?.days.map((e, i) => {
           let date = new Date(e?.datetime);
 
@@ -84,11 +81,8 @@ function Forecast({ data }) {
             i !== 0 && (
               <div
                 key={i}
+                className="forecast"
                 style={{
-                  padding: "0 1.2rem",
-                  fontSize: "18px",
-                  color: "#fff",
-                  width: "max-content",
                   borderRight:
                     i !== 14 ? "0.1px solid rgb(255 255 255 / 56%)" : "none",
                 }}

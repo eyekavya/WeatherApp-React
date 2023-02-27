@@ -34,11 +34,11 @@ function Card({ data, imageUrl }) {
   }, []);
   return (
     <StyledCard>
-      <div className="container">
-        <div className="card">
+      <div className="cardContainer">
+        <div className="glassCard">
           {loading === false ? (
             <div>
-              <div className="d-flex flex-row justify-content-evenly">
+              <div className="d-flex flex-column flex-lg-row justify-content-evenly">
                 <div className="d-flex flex-column">
                   {/* PLACE AND DATE */}
                   <div className="p-2">
@@ -51,7 +51,7 @@ function Card({ data, imageUrl }) {
                   </div>
                   {/* TEMP SUMMARY */}
                   <div
-                    className="p-2 d-flex flex-row justify-content-between"
+                    className="p-2 d-flex flex-row justify-content-center"
                     style={{ gap: "50px" }}
                   >
                     {/* Icon */}
@@ -60,13 +60,7 @@ function Card({ data, imageUrl }) {
                     </div>
                     <div>
                       {/* Temp  */}
-                      <div
-                        style={{
-                          fontSize: "62px",
-                          fontWeight: "600",
-                          color: "#fff",
-                        }}
-                      >
+                      <div className="main-temp">
                         {(((data?.days[0]?.temp - 32) * 5) / 9).toFixed(2)}&deg;
                       </div>
                       {/* Weather Condition  */}

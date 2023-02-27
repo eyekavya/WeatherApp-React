@@ -7,19 +7,20 @@ export const StyledCard = styled.section`
     font-family: "Montserrat", sans-serif;
   }
 
-  .container {
+  .cardContainer {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     margin-top: 5.5rem;
-    width: 1275px;
+    width: max-content;
+    min-width: 500px;
   }
 
-  .card {
+  .glassCard {
     background: rgba(255, 255, 255, 0.3);
     padding: 3em;
-    height: 530px;
+    // height: 530px;
     border-radius: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -30,7 +31,7 @@ export const StyledCard = styled.section`
     position: relative;
     transition: all 0.2s ease-in-out;
   }
-  .card p {
+  .glassCard p {
     font-weight: 500;
     color: #fff;
     opacity: 0.7;
@@ -40,7 +41,7 @@ export const StyledCard = styled.section`
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
-  .card:hover {
+  .glassCard:hover {
     margin: 4px;
   }
 
@@ -55,6 +56,7 @@ export const StyledCard = styled.section`
     position: absolute;
     transition: all 0.2s ease;
   }
+
   .drop-1 {
     height: 80px;
     width: 80px;
@@ -114,5 +116,43 @@ export const StyledCard = styled.section`
   .flex-value {
     font-weight: 700;
     font-size: 20px;
+  }
+
+  .main-temp {
+    font-size: 62px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 720px) {
+    .flex-details {
+      padding: 1.5rem;
+    }
+    .main-temp {
+      font-size: 50px;
+    }
+
+    .flex-value {
+      font-size: 18px;
+    }
+
+    .flex-key {
+      font-size: 16px;
+    }
+
+    .cardContainer {
+      min-width: 300px;
+      width: auto;
+    }
+
+    .glassCard {
+      padding: 1em;
+      margin-bottom: 3rem;
+      pointer-events: none;
+    }
+
+    .drops {
+      display: none;
+    }
   }
 `;

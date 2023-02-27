@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import background from "./background.jpg";
 import Card from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
 import SearchInput from "./components/SearchInput/SearchInput";
 import { iconUrl } from "./constants/imgImports";
+import "./App.css";
 
 function App() {
   const [data, setData] = useState();
@@ -31,16 +31,7 @@ function App() {
 
   return (
     <>
-      <div
-        className="img-fluid"
-        style={{
-          backgroundImage: `url(${background})`,
-          width: "100vw",
-          height: "100vh",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <div className="img-fluid">
         <Navbar />
         <SearchInput updateData={updateData} />
         <Card data={data} imageUrl={imageUrl} />
