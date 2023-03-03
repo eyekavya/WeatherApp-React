@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Forecast from "../Forecast/Forecast";
 import Spinner from "../Spinner/Spinner";
 import { StyledCard } from "./StyledCard";
