@@ -37,7 +37,7 @@ function SearchInput({ updateData }) {
 
   useEffect(() => {
     fetchIpData();
-  }, []);
+  });
 
   return (
     <StyledSearchInput>
