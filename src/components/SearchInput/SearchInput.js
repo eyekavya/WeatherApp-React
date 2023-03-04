@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { ipData_api_key } from "../../constants/appConfig";
 import { fetchWeather } from "../../weather-data/fetchWeather";
