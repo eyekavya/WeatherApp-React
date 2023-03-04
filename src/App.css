@@ -16,10 +16,19 @@
 }
 
 .forecast {
-  padding: 0 1.2rem;
+  padding: 0 1rem;
   font-size: 18px;
   color: #fff;
   width: max-content;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e581b473;
 }
 
 @media screen and (max-width: 720px) {
