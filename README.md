@@ -60,7 +60,6 @@ Dive into Forecastify: [Live Demo](https://forecastify.netlify.app/)
 - JavaScript
 - HTML5
 - CSS3
-- React Router
 
 ## 🤝 Contributing
 
