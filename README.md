@@ -1,6 +1,6 @@
 # Forecastify - Your Weather Companion 🌦️
 
-(https://github.com/eyekavya/WeatherApp-React/blob/master/public/images/forecastify-screenshot.png)
+![Forecastify](/public/images/forecastify-screenshot.png)
 
 Forecastify is not just a weather app; it's your personal meteorologist in the cloud. Stay ahead of the elements with real-time weather updates, beautifully displayed for your chosen location.
 
