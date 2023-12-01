@@ -1,6 +1,6 @@
 # Forecastify - Your Weather Companion 🌦️
 
-(/images/forecastify-screenshot.png)
+(https://github.com/eyekavya/WeatherApp-React/blob/master/public/images/forecastify-screenshot.png)
 
 Forecastify is not just a weather app; it's your personal meteorologist in the cloud. Stay ahead of the elements with real-time weather updates, beautifully displayed for your chosen location.
 
@@ -66,9 +66,9 @@ Dive into Forecastify: [Live Demo](https://forecastify.netlify.app/)
 
 Contributions are like a gust of fresh air! Feel free to open an issue or submit a pull request for new features or bug fixes.
 
-## Author
+## 🙋‍♀️ Author
 
-- Weather data powered by OpenWeatherMap.
+Kavya
 
 ---
 
