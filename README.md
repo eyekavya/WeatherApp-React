@@ -1,4 +1,4 @@
-# Forecastify - Your Weather Companion 🌦️
+# Forecastify 🌦️
 
 ![Forecastify](/public/images/forecastify-screenshot.png)
 
